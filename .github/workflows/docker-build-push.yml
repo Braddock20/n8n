@@ -263,7 +263,7 @@ jobs:
             echo "primary_ghcr_manifest_tag=${PRIMARY_GHCR_MANIFEST_TAG_VALUE}" >> "$GITHUB_OUTPUT"
           fi
 
-      - name: Determine Runners tags
+      - name: Determine Docker tags (runners)
         id: determine-runners-tags
         run: |
           RELEASE_TYPE="${{ needs.determine-build-context.outputs.release_type }}"
